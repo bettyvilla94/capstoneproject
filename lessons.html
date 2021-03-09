@@ -1,0 +1,370 @@
+  <!DOCTYPE html>
+<html>
+<head>
+	<title>Capstone Project-1</title>
+
+	<link rel="stylesheet" type="text/css" href="css/uikit.min.css">
+	<script type="text/javascript" src="js/uikit.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+	<script type="text/javascript" src="semantic/jquery.min.js"></script>
+	<script type="text/javascript" src="semantic/semantic.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/hover.css">
+
+	<style type="text/css">
+		.sh{
+			color: #FFFFFF;
+			text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+		}
+		.bg-img{
+				background-image: url(img/Liquid-Cheese.svg); background-repeat: no-repeat; background-size: cover; 
+				padding: 10% 10% 20% 10%;
+				opacity: 1.4;
+		}
+		.focus-in-expand {
+	-webkit-animation: focus-in-expand 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+.zoomInLeft {
+  -webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes zoomInLeft {
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+  }
+  @keyframes zoomInLeft {
+  0% {
+  opacity: 0;
+  -webkit-transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  transform: scale3d(.1, .1, .1) translate3d(-1000px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+  }
+  60% {
+  opacity: 1;
+  -webkit-transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  transform: scale3d(.475, .475, .475) translate3d(10px, 0, 0);
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+  }
+  }
+	.rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes rubberBand {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  30% {
+  -webkit-transform: scale3d(1.25, 0.75, 1);
+  transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+  -webkit-transform: scale3d(0.75, 1.25, 1);
+  transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.15, 0.85, 1);
+  transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+  -webkit-transform: scale3d(.95, 1.05, 1);
+  transform: scale3d(.95, 1.05, 1);
+  }
+  75% {
+  -webkit-transform: scale3d(1.05, .95, 1);
+  transform: scale3d(1.05, .95, 1);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  }
+  @keyframes rubberBand {
+  0% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  30% {
+  -webkit-transform: scale3d(1.25, 0.75, 1);
+  transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+  -webkit-transform: scale3d(0.75, 1.25, 1);
+  transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+  -webkit-transform: scale3d(1.15, 0.85, 1);
+  transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+  -webkit-transform: scale3d(.95, 1.05, 1);
+  transform: scale3d(.95, 1.05, 1);
+  }
+  75% {
+  -webkit-transform: scale3d(1.05, .95, 1);
+  transform: scale3d(1.05, .95, 1);
+  }
+  100% {
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  }
+  } 
+  .flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  }
+  @-webkit-keyframes flip {
+  0% {
+  -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+  transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  }
+  40% {
+  -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  }
+  50% {
+  -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  }
+  80% {
+  -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+  transform: perspective(400px) scale3d(.95, .95, .95);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  }
+  100% {
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  }
+  }
+  @keyframes flip {
+  0% {
+  -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+  transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  }
+  40% {
+  -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  }
+  50% {
+  -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+  transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  }
+  80% {
+  -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+  transform: perspective(400px) scale3d(.95, .95, .95);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  }
+  100% {
+  -webkit-transform: perspective(400px);
+  transform: perspective(400px);
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  }
+  } 
+ .backback{
+ 	background-color: #991886;
+ 	background-image: url(img/Large-Triangles.svg);
+ 	background-repeat: no-repeat;
+ 	background-size: cover;
+ 	background-attachment: fixed;
+ }
+ .kiki {
+	-webkit-animation: tracking-in-expand-fwd-top 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd-top 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+ @-webkit-keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand-fwd-top {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-transform: translateZ(-700px) translateY(-500px);
+            transform: translateZ(-700px) translateY(-500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+	</style>
+</head>
+<body>
+	<div class="bg-img uk-background-fixed">
+		<a href="https://www.youtube.com/channel/UCPxe2WNL9dXZI6vUxLriFCw"><span style="font-size: 50px; color: black; margin-right: 10%" class="hvr-buzz sh flip"><i class="youtube icon"></i></span></a>
+		<a href="https://web.facebook.com/OfficialJHCSCPresident"><span style="font-size: 50px; color: black; margin-left: 3%;margin-right: 10%" class="hvr-buzz sh flip"><i class="facebook icon"></i></span></a>
+		<a href="https://online.jhcsc.edu.ph/"><span style="font-size: 50px; color: black; margin-left: 3%" class="hvr-buzz sh flip"><i class="university icon"></i></span>
+		<a href="lesson/capstone-module.docx"><span style="font-size: 50px; color: black; margin-left: 10%;" class="hvr-buzz sh flip"><i class="download icon"></i></span>
+		<div style="margin: 7% 0 0 12%"></a>
+			<h1 style="font-size: 6em; color: #121211" class="sh rubberBand hvr-buzz">CAPSTONE PROJECT</h1>
+			<div style="margin: 3% 0 0 2%;">
+				<a href="#start" class="ui inverted purple button hvr-grow-rotate zoomInLeft hvr-buzz-out" href="#start" style="padding: 2% 10% 2% 2%; font-size: 25px;">Learn More ...</a>
+			</div>
+		</div>
+	</div>
+	<div style="background-color: #A026AD; padding: 5%">
+		<div class="uk-container">
+			<div class="uk-text-large uk-text-bold sh hvr-grow-shadow">
+				<h1 style="font-size: 35px; color: #121211;" id="start">WHAT IS CAPSTONE PROJECT?</h1>
+			</div>
+			<div class="uk-text-large hvr-grow-shadow" style="margin-top:;">
+				<p>A <strong class="uk-text-bold">Capstone Project</strong> is a culminating assignment, on which students usually work on during their final year in school or at the end of the academic program. It requires different intellectual activities. This project helps young people learn how to find and analyze information and how to work with it efficiently. It has a wide variety of forms. This means that a capstone program can be submitted in various forms including a multimedia presentation, film, performance, or paper. A capstone research project is very similar to a college thesis. No one can argue that this type of work is a bit more complicated as writing a capstone project involves a wider range of activities like critical thinking, deep analysis, and the ability to use different media.</p>
+			</div>
+		</div>
+	</div>
+	<div style="padding: 5%" class="backback">
+		<div class="uk-container">
+			<h1><strong style="color: black" class="sh kiki hvr-buzz-out">HOW TO WRITE A CAPSTONE PROJECT?</strong></h1>
+			<h2><strong style="color: black">Step by Step:</strong></h2>
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white">
+			    <h2 class="uk-card-title" style="color: white"><strong>Think of a Topic</strong></h2>
+			    <p style="font-size: 20px">It is advisable to think about the topic from the very beginning of the program. Take notes and write down the ideas that come up during the classes. Think about the topics that interested you the most and seem manageable. Talk with your classmates or faculty members who have faced the topic before.<br>
+
+				Focus on topics connected with your own experience and life. Think about situations where your knowledge from the course can be applied. Your capstone project should highlight the knowledge and skills you obtained during the course and how you can apply this in a prospective workplace. For example, it may be a business plan including a market investigation in a particular area, or the development of a new product or program aimed at a certain need.</p>
+			</div>
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white; margin-top: 5%">
+			    <h2 class="uk-card-title" style="color: white"><strong>Create a capstone project proposal</strong></h2>
+			    <p style="font-size: 20px">Before you start writing your paper, you will need to submit a proposal to your tutor. Usually it is a paper of 200 words or more. How to write a capstone proposal? Include the following points in your proposal:<br>-Write about your experience or background in the particular topic.<br>-Highlight the scope of information available and sources.<br>-Tell about the research that you plan to do in your project and what methods you plan to use:<br>-analyze a certain process, pick certain products, etc.<br>-List the required workplace and human subject approvals.<br>-Set the aims that you wish to achieve with this project.</p>
+			</div>
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white; margin-top: 5%">
+			    <h2 class="uk-card-title" style="color: white"><strong>Gather information</strong></h2>
+			    <p style="font-size: 20px">Identify the sources and search for information related to your topic. Look through textbooks from your course; you can find a list of recommended literature and use it as a basis for your project. Create a folder on your computer and save all references and helpful links in one single place. Structure information in various files, name them appropriately, and add tags to ease the navigation. Highlight the key articles related to your topic that you will be discussing in the literature review section. Group the articles by categories.</p>
+			</div>
+		</div>
+	</div>
+	<div style="padding: 5%; background-color: #B32589;">
+		<div class="uk-container">
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white; margin-top: 5%">
+			    <h2 class="uk-card-title" style="color: white"><strong>Come up with a structure</strong></h2>
+			    <p style="font-size: 20px">The structure of every capstone project may vary. A clear structure will help you logically divide your work and concentrate on each part. Here you can see the typical structure of a capstone project:<br>
+
+				Title page.<br>
+				Introduction.<br>
+				Literature review.<br>
+				Methods.<br>
+				Results and Discussion.<br>
+				Conclusion and Recommendations.<br>
+				References list.</p>
+			</div>
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white; margin-top: 5%">
+			    <h2 class="uk-card-title" style="color: white"><strong>Make a timetable</strong></h2>
+			    <p style="font-size: 20px">As a capstone is quite a voluminous paper, you will need to involve your time-planning skills. The best decision will be creating a calendar with tasks and deadlines. Correct the schedule over time, as one task you can complete faster, while the other one may take more time than you have planned. Use organizers in your phone or computer to keep track of your progress any time.</p>
+			</div>
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white; margin-top: 5%">
+			    <h2 class="uk-card-title" style="color: white"><strong>Get to the writing.</strong></h2>
+			    <p style="font-size: 20px">The basis of your capstone project is the thesis statement. Come up with a strong thesis statement that is specific and narrow enough. If your thesis will be too broad, you won’t be able to cover all of the detail. You can write your project from any point you like; the only thing you need to remember is that the introduction is written last. You won’t be able to create a good introduction when you are not deep in the matter of the issue. Don’t forget to state the major problem (or issue) and list the limitations of the study.<br>In the literature review summarize your findings of the existing information on the topic. Make general conclusions and a brief analysis of each source that is valuable for your research. Keep being critical of the sources and note the gaps in the information. Add quotes to add value to your review, but don’t overuse it.</p>
+			</div>
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white; margin-top: 5%">
+			    <h2 class="uk-card-title" style="color: white"><strong>Proofread the text</strong></h2>
+			    <p style="font-size: 20px"> Reread the first draft and make corrections. Firstly, look through all sections and make sure that they are complete and logically right. Cut sentences without meaning, and add important sentences so the text will be complete. When you will be done with the context, look through for incorrect grammar, typos, and other mistakes. Make sure that the tone of your work is totally academic. And at last, format the text in accordance with the requirements to make it look neat and well structured. Ask someone experienced in academic writing to look through your writing and ask for feedback.</p>
+			</div>
+			<div class="uk-card uk-card-default uk-card-body uk-width-1-1@m hvr-grow-shadow" style="background-color: rgba(0,0,0,0.3); color: white; margin-top: 5%">
+			    <h2 class="uk-card-title" style="color: white"><strong>Prepare for the defense</strong></h2>
+			    <p style="font-size: 20px">Most of the project should be defended before the project committee. The quality of your presentation will influence the evaluation of the whole project. Initially you will need to reveal the essence of your topic, discuss the project research, and tell about your findings. Along with your presentation, the committee usually asks questions connected with your research and findings. Usually, committee members are familiar with the text of your project, as they have already looked through your proposal and drafts, so keep in mind that your defense will look more like a discussion than a presentation itself.</p>
+			</div>
+		</div>
+     <div style="margin: 5% 0 0 20%" class="sh">
+        <video controls="">
+           <source src="video/vd.mkv" type="video/mp4">
+        </video>
+      </div>
+	</div>
+	<div style="padding: 5%; background-color: #000000;">
+		<div class="uk-container" style="text-align: center;">
+			<a href="https://www.youtube.com/channel/UCPxe2WNL9dXZI6vUxLriFCw"><span style="font-size: 50px; color: black; margin-right: 10%" class="hvr-buzz sh flip"><i class="youtube icon"></i></span></a>
+		<a href="https://web.facebook.com/OfficialJHCSCPresident"><span style="font-size: 50px; color: black; margin-left: 3%;margin-right: 10%" class="hvr-buzz sh flip"><i class="facebook icon"></i></span></a>
+		<a href="https://online.jhcsc.edu.ph/"><span style="font-size: 50px; color: black; margin-left: 3%" class="hvr-buzz sh flip"><i class="university icon"></i></span>
+		<a href="lesson/capstone-module.docx"><span style="font-size: 50px; color: black; margin-left: 10%;" class="hvr-buzz sh flip"><i class="download icon"></i></span>
+		</div>
+	</div>
+</body>
+</html>
